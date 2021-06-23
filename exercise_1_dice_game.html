@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1. Dice Game</title>
+</head>
+<body>
+    <h2>주사위 게임</h2>
+
+    <script>
+        "use strict";
+        
+        while(true){    
+            const luckyNum = Math.floor(Math.random() * 6) + 1;    
+            const enteredNum = Number(prompt(`🎲이겨야 끝나는 주사위 게임!🎲\n\n주사위에 나올 숫자를 맞춰 보세요!\n1부터 6까지의 숫자 중 하나를 입력해 주세요.`));
+            
+            if(enteredNum <=0 || enteredNum > 6 || isNaN(enteredNum)) {
+                alert('잘못된 값입니다. 다시 입력해 주세요.');
+            } else {
+                if(enteredNum === luckyNum) {
+                    alert(`🎉이겼습니다. 축하합니다!🎉\n\n유저: ${enteredNum}\n컴퓨터: ${luckyNum}`);
+                    document.write('끝!');
+                    break;
+            
+                } else {
+                    alert(`😞졌습니다. 다시 도전하세요!😞\n\n유저: ${enteredNum}\n컴퓨터: ${luckyNum}`);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

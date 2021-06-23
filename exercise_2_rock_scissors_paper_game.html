@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2. Rock Scissors Paper Game</title>
+
+    <style type="text/css">
+        body {
+            width: 200px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 200px
+        }
+    </style>
+</head>
+<body>
+    <h2>가위 바위 보 게임</h2>
+
+    <script>
+        'use strict';
+
+        while(true) {
+            let player = prompt(`✌✊🖐가위 바위 보 게임!✌✊🖐\n\n가위, 바위 보 중 하나를 입력하세요.`);
+            let computer = Math.floor(Math.random() * 3) + 1;
+    
+            if(player === "가위") {
+                if(computer === 1) {
+                    document.write(`<p>컴퓨터: 가위✌</p>`);
+                    document.write(`<p>유저: 가위✌</p>`);
+                    document.write(`<h3>비겼습니다.</h3>`);
+                } else if(computer === 2) {
+                    document.write(`<p>컴퓨터: 바위✊</p>`);
+                    document.write(`<p>유저: 가위✌</p>`);
+                    document.write(`<h3>졌습니다.</h3>`); 
+                } else if(computer === 3) {
+                    document.write(`<p>컴퓨터: 보🖐</p>`);
+                    document.write(`<p>유저: 가위✌</p>`);    
+                    document.write(`<h3>이겼습니다.</h3>`);
+                }
+                document.write(`<button type="button" onclick="location.reload()">재도전</button>`);
+                break;
+            } else if(player === "바위") {
+                if(computer === 1) {
+                    document.write(`<p>컴퓨터: 가위✌</p>`);
+                    document.write(`<p>유저: 바위✊</p>`);
+                    document.write(`<h3>이겼습니다.</h3>`);
+                } else if(computer === 2) {
+                    document.write(`<p>컴퓨터: 바위✊</p>`);
+                    document.write(`<p>유저: 바위✊</p>`);    
+                    document.write(`<h3>비겼습니다.</h3>`);
+                } else if(computer === 3) {
+                    document.write(`<p>컴퓨터: 보🖐</p>`);
+                    document.write(`<p>유저: 바위✊</p>`);    
+                    document.write(`<h3>졌습니다.</h3>`);
+                }
+                document.write(`<button type="button" onclick="location.reload()">재도전</button>`);
+                break;
+            } else if(player === "보") {
+                if(computer === 1) {
+                    document.write(`<p>컴퓨터: 가위✌</p>`);
+                    document.write(`<p>유저: 보🖐</p>`);
+                    document.write(`<h3>졌습니다.</h3>`);
+                } else if(computer === 2) {
+                    document.write(`<p>컴퓨터: 바위✊</p>`);
+                    document.write(`<p>유저: 보🖐</p>`);    
+                    document.write(`<h3>이겼습니다.</h3>`);
+                } else if(computer === 3) {
+                    document.write(`<p>컴퓨터: 보🖐</p>`);
+                    document.write(`<p>유저: 보🖐</p>`);    
+                    document.write(`<h3>비겼습니다.</h3>`);
+                }
+                document.write(`<button type="button" onclick="location.reload()">재도전</button>`);
+                break; 
+            } else {
+                alert('잘못된 값입니다.\n다시 입력해 주세요.');    
+                continue;
+            }
+        }  
+
+    </script>
+</body>
+</html>
